@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://bgfyov0408wkf"]
 
-[ext_resource type="Texture2D" path="res://Assets/Sprite-Environment.png" id="1_6cdri"]
+[ext_resource type="Texture2D" uid="uid://d2d1ytw68v5nh" path="res://Assets/Sprite-Environment.png" id="1_6cdri"]
 [ext_resource type="PackedScene" uid="uid://dx1rtetervop4" path="res://Scene/Card_UI/card_ui.tscn" id="2_8pk6g"]
 [ext_resource type="Script" path="res://Scene/UI/hand.gd" id="2_yq32l"]
 [ext_resource type="PackedScene" uid="uid://c8wa8y8tla57h" path="res://Scene/card_target_selector/card_target_selector.tscn" id="3_75ygc"]
 [ext_resource type="Texture2D" uid="uid://dmlr3e27ja5ql" path="res://Assets/Cards/seed/seed_back_card.png" id="3_vruf2"]
 [ext_resource type="Texture2D" uid="uid://dkjhhmveuvkx0" path="res://Assets/Cards/plant/plant_back_card.png" id="4_4y84b"]
+[ext_resource type="Resource" uid="uid://i5q6nye1bwgk" path="res://characters/seed/cards/seed_deck.tres" id="7_gvdyc"]
+[ext_resource type="Resource" uid="uid://cmq7hdg3flcbo" path="res://characters/plant/cards/plant_deck.tres" id="8_morys"]
 [ext_resource type="Script" path="res://Scene/Board_Grid/token.gd" id="9_axd1l"]
-[ext_resource type="Resource" uid="uid://bymccgbvlvo46" path="res://characters/seed/cards/bean.tres" id="10_g47mb"]
-[ext_resource type="Resource" uid="uid://lhic71bqc4bn" path="res://characters/plant/cards/bean.tres" id="11_riv30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tn3hd"]
 size = Vector2(514.375, 507)
@@ -113,27 +113,27 @@ script = ExtResource("2_yq32l")
 [node name="CardUI" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
 size_flags_horizontal = 1
-card = ExtResource("10_g47mb")
+card = ExtResource("7_gvdyc")
 
 [node name="CardUI2" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
-card = ExtResource("10_g47mb")
+card = ExtResource("7_gvdyc")
 
 [node name="CardUI3" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
-card = ExtResource("10_g47mb")
+card = ExtResource("7_gvdyc")
 
 [node name="CardUI4" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
-card = ExtResource("11_riv30")
+card = ExtResource("8_morys")
 
 [node name="CardUI5" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
-card = ExtResource("11_riv30")
+card = ExtResource("8_morys")
 
 [node name="CardUI6" parent="BoardUI/Hand" instance=ExtResource("2_8pk6g")]
 layout_mode = 2
-card = ExtResource("11_riv30")
+card = ExtResource("8_morys")
 
 [node name="Token2" type="Sprite2D" parent="."]
 position = Vector2(928, 416)

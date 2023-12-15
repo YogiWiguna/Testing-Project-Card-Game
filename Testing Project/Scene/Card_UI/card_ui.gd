@@ -7,9 +7,10 @@ signal throw
 const BASE_STYLEBOX := preload("res://Scene/Card_UI/card_base_stylebox.tres")
 const DRAG_STYLEBOX := preload("res://Scene/Card_UI/card_dragging_stylebox.tres")
 const HOVER_STYLEBOX := preload("res://Scene/Card_UI/card_hover_stylebox.tres")
-
-
 @export var card: Card : set = _set_card
+
+@onready var plant_card = preload("res://characters/plant/cards/plant_deck.tres")
+@onready var seed_card = preload("res://characters/seed/cards/seed_deck.tres") 
 
 @onready var panel = $Panel
 @onready var image = $Image
@@ -34,9 +35,9 @@ var change_to_token = false
 
 func _ready() -> void:
 #	print("ready ")
-	
-	if cardrandom:
-		randomcard()
+	card = plant_card
+#	if cardrandom:
+#		randomcard()
 	
 	card_state_machine.init(self)
 
@@ -87,7 +88,7 @@ func _set_card(value: Card) -> void:
 	
 	card = value
 	cost.text = str(card.cost)
-	image.texture = card.image
+	image.texture = card.pick_random_card_image()
 
 func _on_drop_point_detector_area_entered(area: Area2D) -> void :
 	
